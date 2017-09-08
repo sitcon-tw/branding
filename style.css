@@ -58,6 +58,14 @@ main {
   background-color: #fff;
 }
 
+.link-button {
+  box-shadow: 0 2px 5px rgba(0,0,0,.26);
+  background-color: #77B55A;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+}
+
 dl div {
   margin: 1em 0;
 }
