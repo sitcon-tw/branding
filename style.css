@@ -32,13 +32,15 @@ main {
 
 .color ul {
   margin: 0;
-  padding: 16px;
+  padding: 8px;
   list-style-type: none;
 }
 .color li {
   margin: 0;
-  padding: 0;
-  height: 2em;
+  padding: 8px;
+}
+.color .nb {
+  white-space: nowrap;
 }
 
 .light {
