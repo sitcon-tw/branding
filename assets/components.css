@@ -23,8 +23,28 @@ nav.navbar {
     padding: 0;
 }
 
-nav.navbar ul {
-    margin-top: -1em;
+nav.navbar .nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 讓 logo 的上下邊距消失 */
+    margin: -1em auto -2em 0;
+}
+
+nav.navbar .nav-logo .left > img {
+    /* 將 logo 縮小到合理大小 */
+    width: 8rem;
+}
+
+nav.navbar .nav-logo .right::before {
+    /* 在 logo 跟頁面標題中間加個槓槓 */
+    content: '｜'
+}
+
+nav.navbar .nav-logo .right {
+    /* 用粉圓 */
+    font-family: 'HunInn', sans-serif;
 }
 
 nav.navbar li {
