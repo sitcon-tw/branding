@@ -1,0 +1,161 @@
+/* 以標題及描述文字為主體的區塊 */
+.text-block {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.text-block h1,
+.text-block h2,
+.text-block h3,
+.text-block h4,
+.text-block h5,
+.text-block h6 {
+    margin-bottom: 0.5rem;
+}
+
+/* navbar */
+nav.navbar {
+    /* 置中 */
+    text-align: center;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.navbar .nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 讓 logo 的上下邊距消失 */
+    margin: -1em auto -2em 0;
+}
+
+nav.navbar .nav-logo .left > img {
+    /* 將 logo 縮小到合理大小 */
+    width: 8rem;
+}
+
+nav.navbar .nav-logo .right::before {
+    /* 在 logo 跟頁面標題中間加個槓槓 */
+    content: '｜'
+}
+
+nav.navbar .nav-logo .right {
+    /* 用粉圓 */
+    font-family: 'HunInn', sans-serif;
+}
+
+nav.navbar li {
+    display: inline;
+}
+
+nav.navbar li + li:before {
+    content: "｜";
+    padding: 0 0.2em;
+}
+
+section.logo-block img {
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 0.5em;
+
+    padding: 0.5em 2em;
+}
+
+/* 按鈕 */
+.button {
+    display: flex;
+    
+    /* 黑色文字、不要有底線 */
+    color: rgba(0, 0, 0, 0.9);
+    text-decoration: none;
+
+    /* 置於其上的游標 */
+    cursor: pointer;
+
+    /* 文字置中 */
+    justify-content: center;
+    align-content: center;
+
+    /* 淺灰底 */
+    background-color: #F2F2F2;
+
+    /* padding, margin & border reset */
+    padding: 0.5em 1.5em;
+    margin: 1em 0;
+    border-radius: 0.5em;
+    border: none;
+
+    /* medium */
+    font-weight: 500;
+
+    /* 寬度 */
+    width: 8em;
+}
+
+/* 〈Logo 的使用規範〉中「背景」的 images */
+section.logo-coc section.background .icon-images {
+    width: 100%;
+
+    margin-top: 2em;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+section.logo-coc section.background .icon-images > a {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+/* 色卡集 */
+.color-cards {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+/* 色卡 */
+.color-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+    min-height: 10rem;
+
+    padding: 0.75em;
+    border-radius: 0.5rem;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.color-card > .name {
+    font-weight: bold;
+}
+
+.color-card > .code {
+    font-size: 0.8em;
+
+    font-weight: lighter;
+    line-height: 1.4;
+}
+
+section.write-style .text-block {
+    /* 讓文字靠左對齊就好 */
+    text-align: left;
+}
+
+section.write-style .example > .correct ul {
+    list-style: "✅ ";
+    list-style-position: inside;
+}
+
+section.write-style .example > .wrong ul {
+    list-style: "❌ ";
+    list-style-position: inside;
+}

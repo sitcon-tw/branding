@@ -1,0 +1,100 @@
+/* 1200px 以上的螢幕 */
+@media (min-width: 1200px) {
+    * {
+        --col-gap: 2rem;
+        --row-gap: 1rem;
+    }
+
+    .grid {
+        display: grid;
+    
+        /* 24 行網格系統，其中每行 gap 為 2rem */
+        grid-template-columns: repeat(24, 1fr);
+        column-gap: var(--col-gap);
+        row-gap: var(--row-gap);
+    
+        /* 排版主體置中 */
+        justify-content: center;
+    }
+    
+    /* 〈我們的 Logo〉部分 */
+    section.logo-block {
+        /* 這裡佔用 11 格網格 */
+        grid-column: 8 / span 11;
+    
+        /* 裡面繼續細分成 11 格網格 */
+        display: grid;
+        grid-template-columns: repeat(11, 1fr);
+        column-gap: var(--col-gap);
+    
+        /* 文字垂直置中 */
+        align-items: center;
+    }
+    
+    section.logo-block img {
+        /* logo 圖佔用 5 格 */
+        grid-column: 1 / span 6;
+        width: 100%;
+    }
+    
+    section.logo-block .text-block {
+        /* 文字佔用 5 格 */
+        grid-column: 7 / span 5;
+        width: 100%;
+    }
+    
+    /* 〈Logo 使用規範〉部分 */
+    section.logo-coc {
+        /* 這裡佔用 8 格網格 */
+        grid-column: 5 / span 8;
+    
+        /* 裡面繼續細分成 8 格網格 */
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        column-gap: var(--col-gap);
+    }
+
+    /* 〈Logo 使用規範〉下標題部分 */
+    section.logo-coc .title {
+        /* 佔滿 */
+        grid-column: 1 / span 8;
+    }
+    
+    /* 「Logo 使用規範」下「背景」部分 */
+    section.logo-coc section.background {
+        /* 這裡佔用 5 格網格 */
+        grid-column: 1 / span 5;
+    }
+
+    /* 「Logo 使用規範」下「標準色」部分 */
+    section.logo-coc section.standard-color {
+        /* 這裡佔用 3 格網格 */
+        grid-column: 6 / span 3;
+    }
+
+    /* 「書寫方式」部分 */
+    section.write-style {
+        /* 這裡佔用 7 格網格 */
+        grid-column: 14 / span 7;
+    }
+
+    /* 「書寫方式」的範例部分 */
+    section.write-style .example {
+        /* 裡面繼續細分成 7 格網格 */
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        column-gap: var(--col-gap);
+    
+        margin-top: 1em;
+    }
+
+    /* 「書寫方式」的正確範例 */
+    section.write-style .example > .correct {
+        grid-column: 1 / span 4;
+    }
+
+    /* 「書寫方式」的錯誤範例 */
+    section.write-style .example > .wrong {
+        grid-column: 5 / span 3;
+    }
+}
