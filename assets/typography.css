@@ -1,23 +1,11 @@
-/* jf open 粉圓 */
-@font-face {
-	font-family: 'HunInn';
-	src: url(https://cdn.jsdelivr.net/gh/marsnow/open-huninn-font@1.1/font/jf-openhuninn.eot); /* IE9 Compat Modes */
-	src: local("jf-openhuninn-1.1"),
-         url(https://cdn.jsdelivr.net/gh/marsnow/open-huninn-font@1.1/font/jf-openhuninn.eot?#iefix) format("embedded-opentype"), /* IE6-IE8 */
-	     url(https://cdn.jsdelivr.net/gh/marsnow/open-huninn-font@1.1/font/jf-openhuninn.woff) format("woff"), /* Modern Browsers */
-	     url(https://cdn.jsdelivr.net/gh/marsnow/open-huninn-font@1.1/font/jf-openhuninn.ttf) format("truetype"), /* Safari, Android, iOS */
-	     url(https://cdn.jsdelivr.net/gh/marsnow/open-huninn-font@1.1/font/jf-openhuninn.svg#SealmemoryHeader) format("svg"); /* Legacy iOS */
-}
-
-
-* {
-    font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+html {
+    font-family: 'Nimbus Sans', Helvetica, Arial, 'Noto Sans TC', sans-serif;
     font-size: 14px;
-    color: rgba(0, 0, 0, 0.75);
+    color: #212121;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'HunInn';
+    font-family: 'Noto Sans TC', 'Source Han Sans TC', 'Source Sans Pro', sans-serif;
     font-weight: normal;
 }
 
