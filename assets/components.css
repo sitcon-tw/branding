@@ -13,8 +13,8 @@
     margin-bottom: 0.5rem;
 }
 
-/* navbar */
-nav.navbar {
+/* header */
+header {
     /* 置中 */
     text-align: center;
 
@@ -23,35 +23,30 @@ nav.navbar {
     padding: 0;
 }
 
-nav.navbar .nav-logo {
+header .header-logo {
     display: flex;
     align-items: center;
     justify-content: center;
 
     /* 讓 logo 的上下邊距消失 */
-    margin: -1em auto -2em 0;
+    margin: -1rem auto -2rem 0;
 }
 
-nav.navbar .nav-logo .left > img {
+header .header-logo .left > img {
     /* 將 logo 縮小到合理大小 */
     width: 8rem;
 }
 
-nav.navbar .nav-logo .right::before {
+header .header-logo .right::before {
     /* 在 logo 跟頁面標題中間加個槓槓 */
     content: '｜'
 }
 
-nav.navbar .nav-logo .right {
-    /* 用粉圓 */
-    font-family: 'HunInn', sans-serif;
-}
-
-nav.navbar li {
+header li {
     display: inline;
 }
 
-nav.navbar li + li:before {
+header li + li:before {
     content: "｜";
     padding: 0 0.2em;
 }
