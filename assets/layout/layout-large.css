@@ -44,7 +44,7 @@
     }
     
     /* 〈Logo 使用規範〉部分 */
-    section.logo-coc {
+    section.logo-usage {
         /* 這裡佔用 8 格網格 */
         grid-column: 5 / span 8;
     
@@ -55,19 +55,19 @@
     }
 
     /* 〈Logo 使用規範〉下標題部分 */
-    section.logo-coc .title {
+    section.logo-usage .title {
         /* 佔滿 */
         grid-column: 1 / span 8;
     }
     
     /* 「Logo 使用規範」下「背景」部分 */
-    section.logo-coc section.background {
+    section.logo-usage section.background {
         /* 這裡佔用 5 格網格 */
         grid-column: 1 / span 5;
     }
 
     /* 「Logo 使用規範」下「標準色」部分 */
-    section.logo-coc section.standard-color {
+    section.logo-usage section.standard-color {
         /* 這裡佔用 3 格網格 */
         grid-column: 6 / span 3;
     }

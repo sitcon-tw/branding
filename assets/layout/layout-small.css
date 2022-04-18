@@ -45,7 +45,7 @@
     }
     
     /* 〈Logo 使用規範〉部分 */
-    section.logo-coc {
+    section.logo-usage {
         /* 全佔 */
         grid-column: 1 / span 6;
     
@@ -56,19 +56,19 @@
     }
 
     /* 〈Logo 使用規範〉下標題部分 */
-    section.logo-coc .title {
+    section.logo-usage .title {
         /* 佔滿 */
         grid-column: 1 / span 6;
     }
     
     /* 「Logo 使用規範」下「背景」部分 */
-    section.logo-coc section.background {
+    section.logo-usage section.background {
         /* 全佔 */
         grid-column: 1 / span 6;
     }
 
     /* 「Logo 使用規範」下「標準色」部分 */
-    section.logo-coc section.standard-color {
+    section.logo-usage section.standard-color {
         /* 全佔 */
         grid-column: 1 / span 6;
     }

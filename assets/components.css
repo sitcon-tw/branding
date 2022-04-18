@@ -90,7 +90,7 @@ section.logo-block img {
 }
 
 /* 〈Logo 的使用規範〉中「背景」的 images */
-section.logo-coc section.background .icon-images {
+section.logo-usage section.background .icon-images {
     width: 100%;
 
     margin-top: 2em;
@@ -100,7 +100,7 @@ section.logo-coc section.background .icon-images {
     gap: 10px;
 }
 
-section.logo-coc section.background .icon-images > a {
+section.logo-usage section.background .icon-images > a {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
 }
