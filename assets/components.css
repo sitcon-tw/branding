@@ -35,6 +35,8 @@ header .header-logo {
 header .header-logo .left > img {
     /* 將 logo 縮小到合理大小 */
     width: 8rem;
+
+    vertical-align: middle;
 }
 
 header .header-logo .right::before {
