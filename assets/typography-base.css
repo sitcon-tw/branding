@@ -1,0 +1,5 @@
+:root {
+    --font-family-chinese: 'PingFang TC', '微軟正黑體', 'Microsoft JhengHei', 'Noto Sans TC';
+    --font-family-english: 'Nimbus Sans', 'SF Pro Text', 'SF Pro Display', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial;
+    --font-family-fallback: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
