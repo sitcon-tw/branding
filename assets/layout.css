@@ -81,6 +81,7 @@ body {
     color: #3b3b3b;
     transition: color 0.2s ease;
     white-space: nowrap;
+    line-height: 1;
 }
 
 .header__nav-link--active {
