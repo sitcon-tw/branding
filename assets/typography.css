@@ -1,10 +1,8 @@
 /* ==========================================================================
-   Typography Styles
-   Font Stack: PingFang TC, Microsoft JhengHei, fallbacks
+   General Typography Styles
    ========================================================================== */
 
 html {
-    font-family: 'PingFang TC', '微軟正黑體', 'Microsoft JhengHei', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 14px;
     color: #3b3b3b;
     line-height: 1.5;
@@ -19,7 +17,7 @@ body {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'PingFang TC', '微軟正黑體', 'Microsoft JhengHei', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: inherit;
     font-weight: 600;
     line-height: 1.2;
     margin: 0;
@@ -49,7 +47,6 @@ h4 {
 p {
     margin: 0 0 1em 0;
     line-height: 1.5;
-    text-align: justify;
 }
 
 p:last-child {

@@ -531,14 +531,6 @@ body {
         gap: 1.25rem;
     }
 
-    .examples__section--correct {
-        max-width: 13.9375rem;
-    }
-
-    .examples__section--incorrect {
-        max-width: 11.4375rem;
-    }
-
     .logo-gallery {
         gap: 1.25rem;
     }

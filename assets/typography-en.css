@@ -1,0 +1,12 @@
+/* ==========================================================================
+   Typography Styles for English
+   Font Stack: SF Pro, Segoe UI, Roboto, fallbacks
+   ========================================================================== */
+
+html {
+    font-family: 'SF Pro Text', 'SF Pro Display', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+p {
+    text-align: left;
+}
