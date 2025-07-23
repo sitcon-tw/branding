@@ -5,7 +5,7 @@
 @import './typography-base.css';
 
 html {
-    font-family: var(--font-family-chinese), var(--font-family-fallback);
+    font-family: var(--font-family-english), var(--font-family-chinese), var(--font-family-fallback);
 }
 
 p {
