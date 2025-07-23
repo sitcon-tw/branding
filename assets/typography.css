@@ -1,18 +1,223 @@
+/* ==========================================================================
+   Typography Styles
+   Font Stack: PingFang TC, Microsoft JhengHei, fallbacks
+   ========================================================================== */
+
 html {
-    font-family: 'Nimbus Sans', Helvetica, Arial, 'Noto Sans TC', sans-serif;
+    font-family: 'PingFang TC', '微軟正黑體', 'Microsoft JhengHei', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 14px;
-    color: #212121;
+    color: #3b3b3b;
+    line-height: 1.5;
 }
 
+body {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+}
+
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Noto Sans TC', 'Source Han Sans TC', 'Source Sans Pro', sans-serif;
-    font-weight: normal;
+    font-family: 'PingFang TC', '微軟正黑體', 'Microsoft JhengHei', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 600;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Paragraph and Text Styles */
+p {
+    margin: 0 0 1em 0;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* Links */
+a {
+    color: #77b55a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* Text Utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+/* Font Weight Utilities */
+.font-light {
+    font-weight: 300;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+/* Font Size Utilities */
+.text-xs {
+    font-size: 10px;
+}
+
+.text-sm {
+    font-size: 12px;
+}
+
+.text-base {
+    font-size: 14px;
+}
+
+.text-lg {
+    font-size: 16px;
+}
+
+.text-xl {
+    font-size: 18px;
+}
+
+.text-2xl {
+    font-size: 24px;
+}
+
+.text-3xl {
+    font-size: 32px;
+}
+
+/* Color Utilities */
+.text-primary {
+    color: #77b55a;
+}
+
+.text-secondary {
+    color: #3b3b3b;
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+.text-black {
+    color: #000000;
+}
+
+.text-success {
+    color: #65994c;
+}
+
+.text-error {
+    color: #994c4c;
+}
+
+/* Responsive Typography */
+@media (min-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+    
+    h3 {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+}
+
+/* Print Typography */
+@media print {
+    html {
+        font-size: 12pt;
+        color: #000000;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #000000;
+        page-break-after: avoid;
+    }
+    
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    a {
+        color: #2d5016;
+        text-decoration: underline;
+    }
+    
+    a:hover {
+        color: #1a2e0c;
+    }
+    
+    .text-primary {
+        color: #2d5016;
+    }
 }
