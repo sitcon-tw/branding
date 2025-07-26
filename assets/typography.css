@@ -2,10 +2,20 @@
    General Typography Styles
    ========================================================================== */
 
+:root {
+    --font-family-zh: 'Source Han Sans TC', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei';
+    --font-family-en: 'Nimbus Sans L', Helvetica, Arial;
+}
+
 html {
+    font-family: var(--font-family-en), var(--font-family-zh), system-ui, sans-serif;
     font-size: 14px;
     color: #3b3b3b;
     line-height: 1.5;
+}
+
+p:lang(zh) {
+    text-align: justify;
 }
 
 body {
@@ -161,15 +171,15 @@ a {
     html {
         font-size: 14px;
     }
-    
+
     h1 {
         font-size: 32px;
     }
-    
+
     h2 {
         font-size: 18px;
     }
-    
+
     h3 {
         font-size: 16px;
     }
@@ -179,7 +189,7 @@ a {
     h1 {
         font-size: 32px;
     }
-    
+
     h2 {
         font-size: 18px;
     }
@@ -191,12 +201,12 @@ a {
         font-size: 12pt;
         color: #000000;
     }
-    
+
     h1, h2, h3, h4, h5, h6 {
         color: #000000;
         page-break-after: avoid;
     }
-    
+
     p {
         orphans: 3;
         widows: 3;
@@ -209,11 +219,11 @@ a {
         color: #2d5016;
         text-decoration: underline;
     }
-    
+
     a:hover {
         color: #1a2e0c;
     }
-    
+
     .text-primary {
         color: #2d5016;
     }
