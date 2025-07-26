@@ -4,7 +4,7 @@
 
 :root {
     --font-family-zh: 'Source Han Sans TC', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei';
-    --font-family-en: 'Nimbus Sans L', Helvetica, Arial;
+    --font-family-en: 'Nimbus Sans L', 'Helvetica Neue', Arial;
 }
 
 html {
@@ -114,40 +114,40 @@ a {
 
 /* Font Size Utilities */
 .text-xs {
-    font-size: 10px;
+    font-size: var(--font-size-xs);
 }
 
 .text-sm {
-    font-size: 12px;
+    font-size: var(--font-size-sm);
 }
 
-.text-base {
-    font-size: 14px;
+.text-md {
+    font-size: var(--font-size-md);
 }
 
 .text-lg {
-    font-size: 16px;
+    font-size: var(--font-size-lg);
 }
 
 .text-xl {
-    font-size: 18px;
+    font-size: var(--font-size-xl);
 }
 
 .text-2xl {
-    font-size: 24px;
+    font-size: var(--font-size-2xl);
 }
 
 .text-3xl {
-    font-size: 32px;
+    font-size: var(--font-size-3xl);
 }
 
 /* Color Utilities */
 .text-primary {
-    color: #77b55a;
+    color: var(--color-primary);
 }
 
 .text-secondary {
-    color: #3b3b3b;
+    color: var(--color-secondary);
 }
 
 .text-white {
@@ -159,15 +159,15 @@ a {
 }
 
 .text-success {
-    color: #65994c;
+    color: var(--color-success);
 }
 
 .text-error {
-    color: #994c4c;
+    color: var(--color-error);
 }
 
 /* Responsive Typography */
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     html {
         font-size: 14px;
     }
@@ -185,7 +185,7 @@ a {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
     h1 {
         font-size: 32px;
     }
@@ -216,7 +216,7 @@ a {
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
     a {
-        color: #2d5016;
+        color: var(--color-high-contrast);
         text-decoration: underline;
     }
 
@@ -225,6 +225,6 @@ a {
     }
 
     .text-primary {
-        color: #2d5016;
+        color: var(--color-high-contrast);
     }
 }

@@ -1,7 +1,5 @@
 /* ==========================================================================
    SITCON Branding Website
-   Using PingFang TC and Microsoft JhengHei fonts
-   Mobile-first responsive design with relative units
    ========================================================================== */
 
 /* CSS Custom Properties for consistent spacing and sizing */
@@ -12,21 +10,28 @@
     --spacing-lg: 1.5rem;   /* 24px */
     --spacing-xl: 2rem;     /* 32px */
     --spacing-xxl: 3rem;    /* 48px */
-    
+
     --font-size-sm: 0.875rem;   /* 14px */
     --font-size-md: 1rem;       /* 16px */
     --font-size-lg: 1.125rem;   /* 18px */
     --font-size-xl: 1.5rem;     /* 24px */
     --font-size-xxl: 1.75rem;   /* 28px */
     --font-size-xxxl: 2rem;     /* 32px */
-    
-    --container-padding: 1.25rem;   /* 20px */
-    --container-max-width: 1024px;  /* 1024px */
 
-    --breakpoint-sm: 26.5em;     /* 424px */
-    --breakpoint-md: 48em;       /* 768px */
-    --breakpoint-lg: 64em;       /* 1024px */
-    --breakpoint-xl: 75em;       /* 1200px */
+    --container-padding: 1.25rem;   /* 20px */
+    --container-max-width: 75rem;  /* 1024px */
+
+    --breakpoint-sm: 26.5rem;     /* 424px */
+    --breakpoint-md: 48rem;       /* 768px */
+    --breakpoint-lg: 64rem;       /* 1024px */
+    --breakpoint-xl: 75rem;       /* 1200px */
+    --breakpoint-xxl: 90rem;      /* 1440px */
+
+    --color-primary: #77b55a;
+    --color-secondary: #3b3b3b;
+    --color-success: #65994c;
+    --color-error: #994c4c;
+    --color-high-contrast: #2d5016;
 }
 
 /* Reset and Base Styles */
@@ -38,7 +43,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    color: #3b3b3b;
+    color: var(--color-secondary);
     line-height: 1.5;
     font-size: var(--font-size-sm);
 }
@@ -48,14 +53,13 @@ body {
    ========================================================================== */
 
 .header {
-    background-color: #ffffff;
     padding-top: 1.625rem;
 }
 
 .header__container {
     max-width: var(--container-max-width);
     margin: 0 auto;
-    padding: 0 var(--container-padding) 0.75rem var(--container-padding);
+    padding: 0 var(--container-padding) 0.75rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -78,19 +82,19 @@ body {
     font-size: var(--font-size-sm);
     text-decoration: none;
     font-weight: 400;
-    color: #3b3b3b;
+    color: var(--color-secondary);
     transition: color 0.2s ease;
     white-space: nowrap;
     line-height: 1;
 }
 
 .header__nav-link--active {
-    color: #77b55a;
+    color: var(--color-primary);
     font-weight: 600;
 }
 
 .header__nav-link:hover {
-    color: #77b55a;
+    color: var(--color-primary);
 }
 
 /* ==========================================================================
@@ -98,14 +102,13 @@ body {
    ========================================================================== */
 
 .title-bar {
-    background-color: #77b55a;
+    background-color: var(--color-primary);
     padding: var(--spacing-md) 0;
 }
 
 .title-bar__container {
     max-width: var(--container-max-width);
     margin: 0 auto;
-    /* padding: 0 var(--container-padding); */
 }
 
 .title-bar__title {
@@ -150,7 +153,7 @@ body {
 .content-section__title {
     font-size: var(--font-size-lg);
     font-weight: 600;
-    color: #3b3b3b;
+    color: var(--color-secondary);
     margin: 0 0 0.75rem 0;
     line-height: 1.2;
 }
@@ -162,7 +165,7 @@ body {
 }
 
 .content-section__description {
-    color: #3b3b3b;
+    color: var(--color-secondary);
     margin: 0;
     line-height: 1.5;
 }
@@ -194,7 +197,7 @@ body {
 }
 
 .download-grid__item:hover {
-    background-color: #77b55a;
+    background-color: var(--color-primary);
     transform: translateY(-0.125rem);
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
@@ -240,7 +243,7 @@ body {
 }
 
 .color-palette__item--primary {
-    background-color: #77b55a;
+    background-color: var(--color-primary);
     color: #000000;
 }
 
@@ -286,25 +289,20 @@ body {
 }
 
 .examples__icon {
+    mask-size: cover;
     width: 1.25em;
     height: 1.25em;
     flex-shrink: 0;
 }
 
 .examples__icon--correct {
-    mask-size: cover;
     mask-image: url(./icons/laugh.svg);
-    width: 1.25em;
-    height: 1.25em;
-    background-color: #65994c;
+    background-color: var(--color-success);
 }
 
 .examples__icon--incorrect {
-    mask-size: cover;
     mask-image: url(./icons/frown.svg);
-    width: 1.25em;
-    height: 1.25em;
-    background-color: #994c4c;
+    background-color: var(--color-error);
 }
 
 .examples__title {
@@ -313,11 +311,11 @@ body {
 }
 
 .examples__title--correct {
-    color: #65994c;
+    color: var(--color-success);
 }
 
 .examples__title--incorrect {
-    color: #994c4c;
+    color: var(--color-error);
 }
 
 .examples__content {
@@ -378,7 +376,7 @@ body {
 }
 
 /* ==========================================================================
-   Responsive Design - Small screens and up (425px+)
+   Responsive Design - Small screens and up (424px+)
    ========================================================================== */
 
 @media (min-width: 26.5em) {
@@ -396,10 +394,6 @@ body {
    ========================================================================== */
 
 @media (min-width: 48em) {
-    body {
-        font-size: var(--font-size-sm);
-    }
-
     .header__container {
         padding: 0 2.5rem 0.75rem 2.5rem;
         flex-wrap: nowrap;
@@ -565,11 +559,6 @@ body {
    ========================================================================== */
 
 @media print {
-    body {
-        font-size: 12pt;
-        color: #000;
-    }
-
     .header,
     .title-bar {
         break-inside: avoid;
@@ -600,11 +589,11 @@ body {
 @media (prefers-contrast: high) {
     .header__nav-link--active,
     .header__nav-link:hover {
-        color: #2d5016;
+        color: var(--color-high-contrast);
     }
 
     .download-grid__item {
-        border: 2px solid #2d5016;
+        border: 2px solid var(--color-high-contrast);
     }
 
     .color-palette__item--white {
@@ -616,15 +605,15 @@ body {
 /* Focus styles for keyboard navigation */
 .header__nav-link:focus,
 .download-grid__item:focus {
-    outline: 2px solid #77b55a;
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
 }
 
-/* High contrast focus for better accessibility */
+/* High contrast focus styles */
 @media (prefers-contrast: high) {
     .header__nav-link:focus,
     .download-grid__item:focus {
-        outline-color: #2d5016;
+        outline-color: var(--color-high-contrast);
         outline-width: 3px;
     }
 }
