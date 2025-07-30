@@ -2,7 +2,6 @@
    SITCON Branding Website
    ========================================================================== */
 
-/* CSS Custom Properties for consistent spacing and sizing */
 :root {
   /* Font families */
   --font-family-zh: "Source Han Sans TC", "Noto Sans TC", "PingFang TC",
@@ -24,6 +23,7 @@
   --font-size-xxxl: 2rem; /* 32px */
 
   /* Icon size */
+  --icon-size-text: 1rem; /* 16px */
   --icon-size: 1.25rem; /* 20px */
 
   /* Spacing scale */
@@ -251,8 +251,8 @@ body {
 .download-grid__icon {
   mask-image: url(./icons/download.svg);
   mask-size: cover;
-  width: 1.125em;
-  height: 1.125em;
+  width: var(--icon-size-text);
+  height: var(--icon-size-text);
   flex-shrink: 0;
   background-color: var(--color-black);
 }
@@ -576,17 +576,6 @@ body {
 }
 
 /* ==========================================================================
-   Responsive Design - Extra extra large screens and up (1440px+)
-   ========================================================================== */
-
-@media (min-width: 90rem) {
-  .logo-gallery__img {
-    max-width: 85%;
-    max-height: 85%;
-  }
-}
-
-/* ==========================================================================
    Accessibility Improvements
    ========================================================================== */
 
@@ -603,15 +592,6 @@ body {
 .download-grid__item:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
-}
-
-/* High contrast focus styles */
-@media (prefers-contrast: high) {
-  .header__nav-link:focus-visible,
-  .download-grid__item:focus-visible {
-    outline-color: var(--color-high-contrast);
-    outline-width: 3px;
-  }
 }
 
 /* ==========================================================================
@@ -798,38 +778,5 @@ a:hover {
 
   .logo-gallery__item--dark {
     border: 1px solid #ccc;
-  }
-}
-
-/* ==========================================================================
-   Enhanced High Contrast Mode
-   ========================================================================== */
-
-@media (prefers-contrast: high) {
-  .header__nav-link--active,
-  .header__nav-link:hover {
-    color: var(--color-high-contrast);
-  }
-
-  .download-grid__item {
-    border: 2px solid var(--color-high-contrast);
-  }
-
-  .color-palette__item--white {
-    border-color: var(--color-black);
-    border-width: 2px;
-  }
-
-  a {
-    color: var(--color-high-contrast);
-    text-decoration: underline;
-  }
-
-  a:hover {
-    color: #1a2e0c;
-  }
-
-  .text-primary {
-    color: var(--color-high-contrast);
   }
 }
