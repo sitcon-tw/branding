@@ -4,34 +4,55 @@
 
 /* CSS Custom Properties for consistent spacing and sizing */
 :root {
-    --spacing-xs: 0.5rem;   /* 8px */
-    --spacing-sm: 0.75rem;  /* 12px */
-    --spacing-md: 1rem;     /* 16px */
-    --spacing-lg: 1.5rem;   /* 24px */
-    --spacing-xl: 2rem;     /* 32px */
-    --spacing-xxl: 3rem;    /* 48px */
+    /* Font families */
+    --font-family-zh: 'Source Han Sans TC', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei';
+    --font-family-en: 'Nimbus Sans L', 'Helvetica Neue', Arial;
+    --font-family-base: var(--font-family-en), var(--font-family-zh), system-ui, sans-serif;
 
-    --font-size-sm: 0.875rem;   /* 14px */
-    --font-size-md: 1rem;       /* 16px */
-    --font-size-lg: 1.125rem;   /* 18px */
-    --font-size-xl: 1.5rem;     /* 24px */
-    --font-size-xxl: 1.75rem;   /* 28px */
-    --font-size-xxxl: 2rem;     /* 32px */
+    /* Base font size - using rem for accessibility */
+    --font-size-base: 0.875rem;     /* 14px at 16px root */
+    
+    /* Font size scale */
+    --font-size-xs: 0.625rem;       /* 10px */
+    --font-size-sm: 0.875rem;       /* 14px */
+    --font-size-md: 1rem;           /* 16px */
+    --font-size-lg: 1.125rem;       /* 18px */
+    --font-size-xl: 1.5rem;         /* 24px */
+    --font-size-xxl: 1.75rem;       /* 28px */
+    --font-size-xxxl: 2rem;         /* 32px */
 
+    /* Spacing scale */
+    --spacing-xs: 0.5rem;           /* 8px */
+    --spacing-sm: 0.75rem;          /* 12px */
+    --spacing-md: 1rem;             /* 16px */
+    --spacing-lg: 1.5rem;           /* 24px */
+    --spacing-xl: 2rem;             /* 32px */
+    --spacing-xxl: 3rem;            /* 48px */
+
+    /* Container settings */
     --container-padding: 1.25rem;   /* 20px */
-    --container-max-width: 75rem;  /* 1024px */
+    --container-max-width: 75rem;   /* 1200px */
 
-    --breakpoint-sm: 26.5rem;     /* 424px */
-    --breakpoint-md: 48rem;       /* 768px */
-    --breakpoint-lg: 64rem;       /* 1024px */
-    --breakpoint-xl: 75rem;       /* 1200px */
-    --breakpoint-xxl: 90rem;      /* 1440px */
+    /* Breakpoints */
+    --breakpoint-sm: 26.5rem;       /* 424px */
+    --breakpoint-md: 48rem;         /* 768px */
+    --breakpoint-lg: 64rem;         /* 1024px */
+    --breakpoint-xl: 75rem;         /* 1200px */
+    --breakpoint-xxl: 90rem;        /* 1440px */
 
+    /* Colors */
     --color-primary: #77b55a;
     --color-secondary: #3b3b3b;
     --color-success: #65994c;
     --color-error: #994c4c;
     --color-high-contrast: #2d5016;
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    /* Line heights */
+    --line-height-tight: 1.2;
+    --line-height-base: 1.5;
+    --line-height-loose: 1.7;
 }
 
 /* Reset and Base Styles */
@@ -39,13 +60,21 @@
     box-sizing: border-box;
 }
 
+html {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    color: var(--color-secondary);
+    line-height: var(--line-height-base);
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-    color: var(--color-secondary);
-    line-height: 1.5;
-    font-size: var(--font-size-sm);
+    background-color: var(--color-white);
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
 }
 
 /* ==========================================================================
@@ -53,13 +82,13 @@ body {
    ========================================================================== */
 
 .header {
-    padding-top: 1.625rem;
+    padding-top: var(--spacing-xl);
 }
 
 .header__container {
     max-width: var(--container-max-width);
     margin: 0 auto;
-    padding: 0 var(--container-padding) 0.75rem;
+    padding: 0 var(--container-padding) var(--spacing-sm);
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -68,13 +97,13 @@ body {
 }
 
 .header__logo-img {
-    height: 2em;
+    height: 2rem;
     width: auto;
 }
 
 .header__nav {
     display: flex;
-    gap: 0.75rem;
+    gap: var(--spacing-sm);
     align-items: center;
 }
 
@@ -113,11 +142,11 @@ body {
 
 .title-bar__title {
     margin: 0;
-    color: #ffffff;
+    color: var(--color-white);
     font-size: var(--font-size-xl);
     font-weight: 600;
     text-align: center;
-    line-height: 1;
+    line-height: var(--line-height-tight);
 }
 
 /* ==========================================================================
@@ -154,7 +183,7 @@ body {
     font-size: var(--font-size-lg);
     font-weight: 600;
     color: var(--color-secondary);
-    margin: 0 0 0.75rem 0;
+    margin: 0 0 var(--spacing-sm) 0;
     line-height: 1.2;
 }
 
@@ -167,7 +196,7 @@ body {
 .content-section__description {
     color: var(--color-secondary);
     margin: 0;
-    line-height: 1.5;
+    line-height: var(--line-height-base);
 }
 
 /* ==========================================================================
@@ -177,7 +206,7 @@ body {
 .download-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
+    gap: var(--spacing-sm);
     margin-top: var(--spacing-xs);
 }
 
@@ -290,8 +319,8 @@ body {
 
 .examples__icon {
     mask-size: cover;
-    width: 1.25em;
-    height: 1.25em;
+    width: 1.25rem;
+    height: 1.25rem;
     flex-shrink: 0;
 }
 
