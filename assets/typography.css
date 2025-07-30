@@ -1,209 +1,96 @@
 /* ==========================================================================
-   General Typography Styles
+   Typography Styles - Simplified
    ========================================================================== */
 
-:root {
-    --font-family-zh: 'Source Han Sans TC', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei';
-    --font-family-en: 'Nimbus Sans L', 'Helvetica Neue', Arial;
-}
-
-html {
-    font-family: var(--font-family-en), var(--font-family-zh), system-ui, sans-serif;
-    font-size: 14px;
-    color: #3b3b3b;
-    line-height: 1.5;
-}
-
+/* Chinese-specific typography adjustment */
 p:lang(zh) {
     text-align: justify;
 }
 
-body {
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    line-height: inherit;
-}
-
-/* Headings */
+/* Base heading styles using CSS variables */
 h1, h2, h3, h4, h5, h6 {
     font-family: inherit;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: var(--line-height-tight);
     margin: 0;
 }
 
 h1 {
-    font-size: 32px;
-    font-weight: 600;
+    font-size: var(--font-size-xxxl);
 }
 
 h2 {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: var(--font-size-lg);
 }
 
 h3 {
-    font-size: 16px;
+    font-size: var(--font-size-md);
     font-weight: 500;
 }
 
 h4 {
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     font-weight: 500;
 }
 
-/* Paragraph and Text Styles */
+/* Paragraph styles */
 p {
-    margin: 0 0 1em 0;
-    line-height: 1.5;
+    margin: 0 0 1rem 0;
+    line-height: var(--line-height-base);
 }
 
 p:last-child {
     margin-bottom: 0;
 }
 
-/* Links */
+/* Link styles */
 a {
-    color: #77b55a;
+    color: var(--color-primary);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
-/* Text Utilities */
-.text-center {
-    text-align: center;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-justify {
-    text-align: justify;
-}
-
-.text-nowrap {
-    white-space: nowrap;
-}
-
-/* Font Weight Utilities */
-.font-light {
-    font-weight: 300;
-}
-
-.font-normal {
-    font-weight: 400;
-}
-
-.font-medium {
-    font-weight: 500;
-}
-
-.font-semibold {
-    font-weight: 600;
-}
-
-.font-bold {
-    font-weight: 700;
-}
-
-/* Font Size Utilities */
-.text-xs {
-    font-size: var(--font-size-xs);
-}
-
-.text-sm {
-    font-size: var(--font-size-sm);
-}
-
-.text-md {
-    font-size: var(--font-size-md);
-}
-
-.text-lg {
-    font-size: var(--font-size-lg);
-}
-
-.text-xl {
-    font-size: var(--font-size-xl);
-}
-
-.text-2xl {
-    font-size: var(--font-size-2xl);
-}
-
-.text-3xl {
-    font-size: var(--font-size-3xl);
-}
-
-/* Color Utilities */
-.text-primary {
+a:hover {
     color: var(--color-primary);
 }
 
-.text-secondary {
-    color: var(--color-secondary);
-}
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+.text-nowrap { white-space: nowrap; }
 
-.text-white {
-    color: #ffffff;
-}
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
 
-.text-black {
-    color: #000000;
-}
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-md { font-size: var(--font-size-md); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+.text-xxl { font-size: var(--font-size-xxl); }
+.text-xxxl { font-size: var(--font-size-xxxl); }
 
-.text-success {
-    color: var(--color-success);
-}
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-white { color: var(--color-white); }
+.text-black { color: var(--color-black); }
+.text-success { color: var(--color-success); }
+.text-error { color: var(--color-error); }
 
-.text-error {
-    color: var(--color-error);
-}
-
-/* Responsive Typography */
-@media (min-width: 48rem) {
-    html {
-        font-size: 14px;
-    }
-
-    h1 {
-        font-size: 32px;
-    }
-
-    h2 {
-        font-size: 18px;
-    }
-
-    h3 {
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 64rem) {
-    h1 {
-        font-size: 32px;
-    }
-
-    h2 {
-        font-size: 18px;
-    }
-}
-
-/* Print Typography */
+/* Print styles */
 @media print {
     html {
         font-size: 12pt;
-        color: #000000;
+        color: var(--color-black);
     }
 
     h1, h2, h3, h4, h5, h6 {
-        color: #000000;
+        color: var(--color-black);
         page-break-after: avoid;
     }
 
@@ -211,9 +98,14 @@ a {
         orphans: 3;
         widows: 3;
     }
+
+    a {
+        color: var(--color-black);
+        text-decoration: underline;
+    }
 }
 
-/* High Contrast Mode */
+/* High contrast mode adjustments */
 @media (prefers-contrast: high) {
     a {
         color: var(--color-high-contrast);
