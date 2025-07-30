@@ -193,7 +193,7 @@ body {
 .content-section__body {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: var(--spacing-sm);
 }
 
 .content-section__description {
@@ -357,7 +357,7 @@ body {
 
 .examples__content {
     text-align: left;
-    padding-left: calc(var(--spacing-lg) + 0.25rem);
+    padding-left: var(--spacing-2xl);
 }
 
 .examples__item {
@@ -416,7 +416,7 @@ body {
    Responsive Design - Small screens and up (424px+)
    ========================================================================== */
 
-@media (min-width: 26.5em) {
+@media (min-width: 26.5rem) {
     .logo-gallery {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -430,15 +430,15 @@ body {
    Responsive Design - Medium screens and up (768px+)
    ========================================================================== */
 
-@media (min-width: 48em) {
+@media (min-width: 48rem) {
     .header__container {
-        padding: 0 2.5rem 0.75rem 2.5rem;
+        padding: 0 var(--spacing-2xl) var(--spacing-sm) var(--spacing-2xl);
         flex-wrap: nowrap;
         gap: var(--spacing-lg);
     }
 
     .header__logo-img {
-        height: 2.25em;
+        height: 2.25rem;
     }
 
     .header__nav-link {
@@ -446,11 +446,11 @@ body {
     }
 
     .title-bar {
-        padding: calc(var(--spacing-md) + 0.125rem) 0;
+        padding: var(--spacing-md) 0;
     }
 
     .title-bar__container {
-        padding: 0 calc(var(--spacing-xl) + 0.5rem);
+        padding: 0 var(--spacing-2xl);
     }
 
     .title-bar__title {
@@ -463,22 +463,22 @@ body {
     }
 
     .main__container {
-        padding: 0 calc(var(--spacing-xl) + 0.5rem);
+        padding: 0 var(--spacing-2xl);
     }
 
     .content-section {
-        margin-bottom: 2.5rem;
+        margin-bottom: var(--spacing-2xl);
     }
 
     .download-grid {
         max-width: 50%;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        gap: var(--spacing-md);
     }
 
     .download-grid__item {
         font-size: var(--font-size-sm);
-        padding: calc(var(--spacing-xs) - 0.125rem) var(--spacing-sm);
+        padding: var(--spacing-xs) var(--spacing-sm);
         min-height: 2.25rem;
     }
 
@@ -511,7 +511,7 @@ body {
    Responsive Design - Large screens and up (1024px+)
    ========================================================================== */
 
-@media (min-width: 64em) {
+@media (min-width: 64rem) {
     .main__container {
         display: flex;
         align-items: flex-start;
@@ -540,12 +540,7 @@ body {
    Responsive Design - Extra large screens and up (1200px+)
    ========================================================================== */
 
-@media (min-width: 75em) {
-    .header__container {
-        max-width: var(--container-max-width);
-        margin: 0 auto;
-    }
-
+@media (min-width: 75rem) {
     .title-bar__title {
         font-size: var(--font-size-xxxl);
     }
@@ -568,7 +563,7 @@ body {
     }
 
     .examples {
-        margin-top: 1.5rem;
+        margin-top: var(--spacing-lg);
         gap: var(--spacing-lg);
     }
 
@@ -581,7 +576,7 @@ body {
    Responsive Design - Extra extra large screens and up (1440px+)
    ========================================================================== */
 
-@media (min-width: 90em) {
+@media (min-width: 90rem) {
     .logo-gallery__img {
         max-width: 85%;
         max-height: 85%;
@@ -657,7 +652,7 @@ h4 {
 
 /* Paragraph styles */
 p {
-    margin: 0 0 1rem 0;
+    margin: 0 0 var(--spacing-md) 0;
     line-height: var(--line-height-base);
 }
 
