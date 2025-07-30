@@ -644,3 +644,167 @@ body {
         outline-width: 3px;
     }
 }
+
+/* ==========================================================================
+   Typography Styles - Integrated
+   ========================================================================== */
+
+/* Chinese-specific typography adjustment */
+p:lang(zh) {
+    text-align: justify;
+}
+
+/* Base heading styles using CSS variables */
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 600;
+    line-height: var(--line-height-tight);
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--font-size-xxxl);
+}
+
+h2 {
+    font-size: var(--font-size-lg);
+}
+
+h3 {
+    font-size: var(--font-size-md);
+    font-weight: 500;
+}
+
+h4 {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
+
+/* Paragraph styles */
+p {
+    margin: 0 0 1rem 0;
+    line-height: var(--line-height-base);
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* Link styles */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+
+/* Text alignment utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+.text-nowrap { white-space: nowrap; }
+
+/* Font weight utilities */
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+
+/* Font size utilities */
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-md { font-size: var(--font-size-md); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+.text-xxl { font-size: var(--font-size-xxl); }
+.text-xxxl { font-size: var(--font-size-xxxl); }
+
+/* Color utilities */
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-white { color: var(--color-white); }
+.text-black { color: var(--color-black); }
+.text-success { color: var(--color-success); }
+.text-error { color: var(--color-error); }
+
+/* ==========================================================================
+   Enhanced Print Styles
+   ========================================================================== */
+
+@media print {
+    html {
+        font-size: 12pt;
+        color: var(--color-black);
+    }
+
+    .header,
+    .title-bar {
+        break-inside: avoid;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--color-black);
+        page-break-after: avoid;
+    }
+
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+
+    a {
+        color: var(--color-black);
+        text-decoration: underline;
+    }
+
+    .download-grid__item {
+        border: 1px solid #ccc;
+        background-color: #f9f9f9 !important;
+    }
+
+    .logo-gallery__item--dark {
+        border: 1px solid #ccc;
+    }
+}
+
+/* ==========================================================================
+   Enhanced High Contrast Mode
+   ========================================================================== */
+
+@media (prefers-contrast: high) {
+    .header__nav-link--active,
+    .header__nav-link:hover {
+        color: var(--color-high-contrast);
+    }
+
+    .download-grid__item {
+        border: 2px solid var(--color-high-contrast);
+    }
+
+    .color-palette__item--white {
+        border-color: var(--color-black);
+        border-width: 2px;
+    }
+
+    a {
+        color: var(--color-high-contrast);
+        text-decoration: underline;
+    }
+
+    a:hover {
+        color: #1a2e0c;
+    }
+
+    .text-primary {
+        color: var(--color-high-contrast);
+    }
+}
