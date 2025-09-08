@@ -598,9 +598,14 @@ body {
    Typography Styles
    ========================================================================== */
 
-/* Chinese-specific typography adjustment */
+/* Mandarin-specific typography adjustment */
 p:lang(zh) {
   text-align: justify;
+}
+
+em:lang(zh) {
+  font-style: inherit;
+  font-weight: 500;
 }
 
 /* Base heading styles using CSS variables */
